@@ -149,15 +149,15 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Cohort)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPo-a4-eVC">
-                                                            <rect key="frame" x="0.0" y="40.333333333333336" width="64.666666666666671" height="20.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="40.333333333333343" width="64.666666666666671" height="20.333333333333329"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Description)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcC-7Y-7Gp">
-                                                    <rect key="frame" x="229" y="87.666666666666671" width="116" height="20.333333333333329"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Description)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="tcC-7Y-7Gp">
+                                                    <rect key="frame" x="229" y="87.666666666666686" width="116" height="118.33333333333331"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -174,6 +174,7 @@
                                                 <constraint firstItem="gSq-Kj-hQi" firstAttribute="top" secondItem="wyj-02-4kR" secondAttribute="topMargin" constant="8" id="dPE-9O-MME"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="tcC-7Y-7Gp" secondAttribute="trailing" constant="8" id="jEp-MZ-2uA"/>
                                                 <constraint firstItem="tcC-7Y-7Gp" firstAttribute="leading" secondItem="PoI-P3-ams" secondAttribute="trailing" constant="20" id="ov9-bo-eid"/>
+                                                <constraint firstItem="tcC-7Y-7Gp" firstAttribute="top" secondItem="wyj-02-4kR" secondAttribute="topMargin" constant="76.666666666666686" id="qgn-dw-lff"/>
                                             </constraints>
                                             <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         </tableViewCellContentView>

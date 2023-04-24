@@ -17,7 +17,7 @@ class UserTableViewCell: UITableViewCell {
     
     func updateUI(user: User) {
         userNameLabel.text = user.userName
-        cohortLabel.text = user.cohort
+        cohortLabel.text = "Cohort: iOS\(user.cohort)"
         descriptionLabel.text = user.description
         
         profilePictureImageView.fetchImage(using: user)
