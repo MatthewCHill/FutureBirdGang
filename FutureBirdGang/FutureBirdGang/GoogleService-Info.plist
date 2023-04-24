@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>297930677687-e1bfb34np9rs8t2vbfd008rth0rq1fs9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.297930677687-e1bfb34np9rs8t2vbfd008rth0rq1fs9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAT-42hWbCbHNcVTLRvw2JmQhS0MCd4w-4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>297930677687</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>MetaChillDevelopers.FutureBirdGang</string>
+	<key>PROJECT_ID</key>
+	<string>futurebirdgang-73b9a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>futurebirdgang-73b9a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:297930677687:ios:660390b5ce55f4aff29c32</string>
+</dict>
+</plist>
