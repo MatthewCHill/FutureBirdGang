@@ -16,7 +16,8 @@
 		340208BF29F6D0EF00DC4A00 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 340208BE29F6D0EF00DC4A00 /* FirebaseAuth */; };
 		340208C129F6D0EF00DC4A00 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 340208C029F6D0EF00DC4A00 /* FirebaseFirestore */; };
 		340208C329F6D0EF00DC4A00 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 340208C229F6D0EF00DC4A00 /* FirebaseStorage */; };
-		340208C529F6D15C00DC4A00 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 340208C429F6D15C00DC4A00 /* GoogleService-Info (1).plist */; };
+		340208C829F6D59600DC4A00 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340208C729F6D59600DC4A00 /* FirebaseService.swift */; };
+		340208CA29F6DDDF00DC4A00 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 340208C929F6DDDF00DC4A00 /* GoogleService-Info (1).plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +29,8 @@
 		340208B029F6CC7100DC4A00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		340208B229F6CC7100DC4A00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		340208BB29F6CFA600DC4A00 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		340208C429F6D15C00DC4A00 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info (1).plist"; path = "../../../../../Downloads/GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		340208C729F6D59600DC4A00 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		340208C929F6DDDF00DC4A00 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info (1).plist"; path = "../../../../../../Downloads/GoogleService-Info (1).plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				340208A329F6CC6D00DC4A00 /* FutureBirdGang */,
-				340208C429F6D15C00DC4A00 /* GoogleService-Info (1).plist */,
 				340208A229F6CC6D00DC4A00 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,11 +66,13 @@
 		340208A329F6CC6D00DC4A00 /* FutureBirdGang */ = {
 			isa = PBXGroup;
 			children = (
+				340208C629F6D58400DC4A00 /* Supporting Files */,
 				340208BA29F6CF8C00DC4A00 /* Models */,
 				340208B929F6CD4600DC4A00 /* Views */,
 				340208B829F6CD2700DC4A00 /* HelperFiles */,
 				340208AA29F6CC6D00DC4A00 /* Main.storyboard */,
 				340208AF29F6CC7100DC4A00 /* LaunchScreen.storyboard */,
+				340208C929F6DDDF00DC4A00 /* GoogleService-Info (1).plist */,
 			);
 			path = FutureBirdGang;
 			sourceTree = "<group>";
@@ -98,6 +101,14 @@
 				340208BB29F6CFA600DC4A00 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		340208C629F6D58400DC4A00 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				340208C729F6D59600DC4A00 /* FirebaseService.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,7 +180,7 @@
 				340208B129F6CC7100DC4A00 /* LaunchScreen.storyboard in Resources */,
 				340208AE29F6CC7100DC4A00 /* Assets.xcassets in Resources */,
 				340208AC29F6CC6D00DC4A00 /* Main.storyboard in Resources */,
-				340208C529F6D15C00DC4A00 /* GoogleService-Info (1).plist in Resources */,
+				340208CA29F6DDDF00DC4A00 /* GoogleService-Info (1).plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +193,7 @@
 			files = (
 				340208A529F6CC6D00DC4A00 /* AppDelegate.swift in Sources */,
 				340208A729F6CC6D00DC4A00 /* SceneDelegate.swift in Sources */,
+				340208C829F6D59600DC4A00 /* FirebaseService.swift in Sources */,
 				340208BC29F6CFA600DC4A00 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

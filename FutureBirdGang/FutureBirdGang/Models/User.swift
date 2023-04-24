@@ -13,7 +13,7 @@ class User {
         static let userName = "userName"
         static let cohort = "cohort"
         static let description = "description"
-        static let profilePicture = "profilePicture"
+        static let profilePicture = "profilePictureURL"
         static let uuid = "uuid"
         static let collectionType = "userInfo"
     }
@@ -21,7 +21,7 @@ class User {
     let userName: String
     let cohort: String
     let description: String
-    let profilePicture: String?
+    var profilePicture: String?
     let uuid: String
     
     var dictionaryRepresentation: [String: AnyHashable] {
