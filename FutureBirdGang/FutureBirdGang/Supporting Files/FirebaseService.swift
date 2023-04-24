@@ -7,6 +7,7 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseStorage
+import FirebaseAuth
 
 enum FirebaseError: Error {
     case firebaseError(Error)
@@ -16,6 +17,12 @@ enum FirebaseError: Error {
 
 protocol FireBaseSyncable {
     func save(username: String, cohort: String, description: String, profilePicture: UIImage, completion: @escaping() -> Void)
+    func loadProfile(completion: @escaping (Result<[User], FirebaseError>) -> Void)
+    func delete(user: User)
+    func saveImage(_ image: UIImage, with uuidString: String, completion: @escaping (Result<URL, FirebaseError>) -> Void)
+    func fetchImage(from user: User, completion: @escaping (Result<UIImage, FirebaseError>) -> Void)
+    func deleteImage(from user: User)
+    func update(_ user: User, with newImage: UIImage, completion: @escaping () -> Void)
 }
 
 struct FirebaseService: FireBaseSyncable {
@@ -28,12 +35,12 @@ struct FirebaseService: FireBaseSyncable {
     // MARK: - Functions
     func save(username: String, cohort: String, description: String, profilePicture: UIImage, completion: @escaping() -> Void) {
         
-        let uuid = UUID().uuidString
+        guard let uuid = Auth.auth().currentUser?.uid else { return}
         
         saveImage(profilePicture, with: uuid) { result in
             switch result {
             case .success(let profilePicture):
-                let user = User(userName: username, cohort: cohort, description: description, profilePicture: profilePicture.absoluteString)
+                let user = User(userName: username, cohort: cohort, description: description, profilePicture: profilePicture.absoluteString, uuid: uuid)
                 ref.collection(User.Key.collectionType).document(user.uuid).setData(user.dictionaryRepresentation)
                 completion()
             case .failure(let failure):
@@ -66,8 +73,6 @@ struct FirebaseService: FireBaseSyncable {
     func delete(user: User) {
         ref.collection(User.Key.collectionType).document(user.uuid).delete()
         deleteImage(from: user)
-        
-        
     }
     
     func saveImage(_ image: UIImage, with uuidString: String, completion: @escaping (Result<URL, FirebaseError>) -> Void) {
@@ -107,6 +112,7 @@ struct FirebaseService: FireBaseSyncable {
             return
         }
     }
+    
     func fetchImage(from user: User, completion: @escaping (Result<UIImage, FirebaseError>) -> Void) {
         storage.child(User.Key.profilePicture).child(user.uuid).getData(maxSize: 1024 * 1024) { result in
             switch result {
@@ -139,5 +145,16 @@ struct FirebaseService: FireBaseSyncable {
             }
         }
     }
+    
+    func signOut() {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            print("Signed Out")
+        } catch let signOutError as NSError {
+            print("Error signing out", signOutError)
+        }
+    }
+    
 }
 

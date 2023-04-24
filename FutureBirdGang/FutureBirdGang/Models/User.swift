@@ -18,11 +18,11 @@ class User {
         static let collectionType = "userInfo"
     }
     
-    let userName: String
-    let cohort: String
-    let description: String
+    var userName: String
+    var cohort: String
+    var description: String
     var profilePicture: String?
-    let uuid: String
+    var uuid: String
     
     var dictionaryRepresentation: [String: AnyHashable] {
         
@@ -35,7 +35,7 @@ class User {
         ]
     }
     
-    init(userName: String, cohort: String, description: String, profilePicture: String, uuid: String = UUID().uuidString) {
+    init(userName: String, cohort: String, description: String, profilePicture: String, uuid: String) {
         self.userName = userName
         self.cohort = cohort
         self.description = description

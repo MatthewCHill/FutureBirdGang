@@ -21,6 +21,16 @@
 		340208CD29F6E9D500DC4A00 /* UserSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340208CC29F6E9D500DC4A00 /* UserSignInViewController.swift */; };
 		340208D029F6EA0900DC4A00 /* CohortsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340208CF29F6EA0900DC4A00 /* CohortsViewController.swift */; };
 		340208D329F6EA2400DC4A00 /* UserSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340208D229F6EA2400DC4A00 /* UserSettingsViewController.swift */; };
+		340208D629F6EB6800DC4A00 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340208D529F6EB6800DC4A00 /* SignInViewController.swift */; };
+		340208D829F6EB7C00DC4A00 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340208D729F6EB7C00DC4A00 /* SignInViewModel.swift */; };
+		340208DB29F6EFEB00DC4A00 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340208DA29F6EFEB00DC4A00 /* CreateUserViewController.swift */; };
+		340208DD29F6EFFB00DC4A00 /* CreateUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340208DC29F6EFFB00DC4A00 /* CreateUserViewModel.swift */; };
+		340208DF29F6F1E500DC4A00 /* UserSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340208DE29F6F1E500DC4A00 /* UserSettingViewModel.swift */; };
+		340208E129F6FCB300DC4A00 /* UIViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340208E029F6FCB300DC4A00 /* UIViewControllers.swift */; };
+		340208E429F6FD5300DC4A00 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340208E329F6FD5300DC4A00 /* UserListViewController.swift */; };
+		340208E629F6FD6100DC4A00 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340208E529F6FD6100DC4A00 /* UserListViewModel.swift */; };
+		340208E829F6FED900DC4A00 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340208E729F6FED900DC4A00 /* UserTableViewCell.swift */; };
+		340208EA29F6FF6E00DC4A00 /* ServiceRequestingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340208E929F6FF6E00DC4A00 /* ServiceRequestingImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,10 +43,20 @@
 		340208B229F6CC7100DC4A00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		340208BB29F6CFA600DC4A00 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		340208C729F6D59600DC4A00 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
-		340208C929F6DDDF00DC4A00 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		340208C929F6DDDF00DC4A00 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		340208CC29F6E9D500DC4A00 /* UserSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignInViewController.swift; sourceTree = "<group>"; };
 		340208CF29F6EA0900DC4A00 /* CohortsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CohortsViewController.swift; sourceTree = "<group>"; };
 		340208D229F6EA2400DC4A00 /* UserSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewController.swift; sourceTree = "<group>"; };
+		340208D529F6EB6800DC4A00 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		340208D729F6EB7C00DC4A00 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		340208DA29F6EFEB00DC4A00 /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
+		340208DC29F6EFFB00DC4A00 /* CreateUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewModel.swift; sourceTree = "<group>"; };
+		340208DE29F6F1E500DC4A00 /* UserSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingViewModel.swift; sourceTree = "<group>"; };
+		340208E029F6FCB300DC4A00 /* UIViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllers.swift; sourceTree = "<group>"; };
+		340208E329F6FD5300DC4A00 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		340208E529F6FD6100DC4A00 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		340208E729F6FED900DC4A00 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		340208E929F6FF6E00DC4A00 /* ServiceRequestingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestingImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +117,9 @@
 		340208B929F6CD4600DC4A00 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				340208E229F6FD1700DC4A00 /* UserListView */,
+				340208D929F6EFD200DC4A00 /* CreateUser */,
+				340208D429F6EB5600DC4A00 /* Sign In */,
 				340208D129F6EA0F00DC4A00 /* UserSettings */,
 				340208CE29F6E9E100DC4A00 /* Cohorts */,
 				340208CB29F6E9BB00DC4A00 /* UserSignIn */,
@@ -116,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				340208C729F6D59600DC4A00 /* FirebaseService.swift */,
+				340208E029F6FCB300DC4A00 /* UIViewControllers.swift */,
+				340208E929F6FF6E00DC4A00 /* ServiceRequestingImageView.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -140,8 +165,37 @@
 			isa = PBXGroup;
 			children = (
 				340208D229F6EA2400DC4A00 /* UserSettingsViewController.swift */,
+				340208DE29F6F1E500DC4A00 /* UserSettingViewModel.swift */,
 			);
 			path = UserSettings;
+			sourceTree = "<group>";
+		};
+		340208D429F6EB5600DC4A00 /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+				340208D529F6EB6800DC4A00 /* SignInViewController.swift */,
+				340208D729F6EB7C00DC4A00 /* SignInViewModel.swift */,
+			);
+			path = "Sign In";
+			sourceTree = "<group>";
+		};
+		340208D929F6EFD200DC4A00 /* CreateUser */ = {
+			isa = PBXGroup;
+			children = (
+				340208DA29F6EFEB00DC4A00 /* CreateUserViewController.swift */,
+				340208DC29F6EFFB00DC4A00 /* CreateUserViewModel.swift */,
+			);
+			path = CreateUser;
+			sourceTree = "<group>";
+		};
+		340208E229F6FD1700DC4A00 /* UserListView */ = {
+			isa = PBXGroup;
+			children = (
+				340208E329F6FD5300DC4A00 /* UserListViewController.swift */,
+				340208E529F6FD6100DC4A00 /* UserListViewModel.swift */,
+				340208E729F6FED900DC4A00 /* UserTableViewCell.swift */,
+			);
+			path = UserListView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,12 +279,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				340208A529F6CC6D00DC4A00 /* AppDelegate.swift in Sources */,
+				340208DB29F6EFEB00DC4A00 /* CreateUserViewController.swift in Sources */,
 				340208CD29F6E9D500DC4A00 /* UserSignInViewController.swift in Sources */,
 				340208D329F6EA2400DC4A00 /* UserSettingsViewController.swift in Sources */,
+				340208E829F6FED900DC4A00 /* UserTableViewCell.swift in Sources */,
+				340208E629F6FD6100DC4A00 /* UserListViewModel.swift in Sources */,
 				340208A729F6CC6D00DC4A00 /* SceneDelegate.swift in Sources */,
+				340208D629F6EB6800DC4A00 /* SignInViewController.swift in Sources */,
+				340208DD29F6EFFB00DC4A00 /* CreateUserViewModel.swift in Sources */,
+				340208E429F6FD5300DC4A00 /* UserListViewController.swift in Sources */,
+				340208D829F6EB7C00DC4A00 /* SignInViewModel.swift in Sources */,
 				340208C829F6D59600DC4A00 /* FirebaseService.swift in Sources */,
+				340208EA29F6FF6E00DC4A00 /* ServiceRequestingImageView.swift in Sources */,
 				340208BC29F6CFA600DC4A00 /* User.swift in Sources */,
+				340208DF29F6F1E500DC4A00 /* UserSettingViewModel.swift in Sources */,
 				340208D029F6EA0900DC4A00 /* CohortsViewController.swift in Sources */,
+				340208E129F6FCB300DC4A00 /* UIViewControllers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +441,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XQ89G6F3FY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FutureBirdGang/HelperFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -404,6 +469,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XQ89G6F3FY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FutureBirdGang/HelperFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

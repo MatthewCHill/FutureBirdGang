@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="1qW-Xg-gcM">
             <objects>
-                <viewController storyboardIdentifier="LogIn" id="jfG-gx-ZVz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogIn" id="jfG-gx-ZVz" customClass="SignInViewController" customModule="FutureBirdGang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gBG-ZB-UmR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="58" width="353" height="34"/>
                                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -43,6 +43,9 @@
                                 <rect key="frame" x="20" y="399" width="353" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign In"/>
+                                <connections>
+                                    <action selector="signInButtonTapped:" destination="jfG-gx-ZVz" eventType="touchUpInside" id="PHG-nF-fzq"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKD-Iz-7fC">
                                 <rect key="frame" x="187" y="483.33333333333331" width="19" height="20.333333333333314"/>
@@ -78,6 +81,10 @@
                             <constraint firstItem="HB8-cE-qL9" firstAttribute="trailing" secondItem="SQC-LC-MZX" secondAttribute="trailing" constant="20" id="sl3-zg-QaQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="aMk-85-PcX" id="ukm-4a-RLK"/>
+                        <outlet property="passwordTextField" destination="rt5-fX-Zc3" id="zGf-3B-YqU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Veg-vu-ZtO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -104,7 +111,7 @@
         <!--Cohort-->
         <scene sceneID="HDP-Im-4k2">
             <objects>
-                <viewController id="kzR-8S-BYT" sceneMemberID="viewController">
+                <viewController id="kzR-8S-BYT" customClass="UserListViewController" customModule="FutureBirdGang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="now-O0-ImT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,21 +126,21 @@
                                 <rect key="frame" x="10" y="197" width="373" height="572"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="217" id="rJN-tH-aVI">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userCell" rowHeight="217" id="rJN-tH-aVI" customClass="UserTableViewCell" customModule="FutureBirdGang" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="373" height="217"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rJN-tH-aVI" id="wyj-02-4kR">
                                             <rect key="frame" x="0.0" y="0.0" width="373" height="217"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PoI-P3-ams">
-                                                    <rect key="frame" x="8" y="8" width="134" height="201"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PoI-P3-ams" customClass="ServiceRequestingImageView" customModule="FutureBirdGang" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="201" height="201"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="PoI-P3-ams" secondAttribute="height" multiplier="2:3" id="Tsf-FJ-atz"/>
+                                                        <constraint firstAttribute="width" secondItem="PoI-P3-ams" secondAttribute="height" multiplier="1:1" id="Tsf-FJ-atz"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gSq-Kj-hQi">
-                                                    <rect key="frame" x="162" y="18.999999999999996" width="183" height="60.666666666666657"/>
+                                                    <rect key="frame" x="229" y="18.999999999999996" width="116" height="60.666666666666657"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zp-wm-46H">
                                                             <rect key="frame" x="0.0" y="0.0" width="57" height="20.333333333333332"/>
@@ -150,13 +157,14 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Description)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcC-7Y-7Gp">
-                                                    <rect key="frame" x="162" y="87.666666666666671" width="183" height="20.333333333333329"/>
+                                                    <rect key="frame" x="229" y="87.666666666666671" width="116" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="tcC-7Y-7Gp" secondAttribute="bottom" id="FBl-JI-Xi7"/>
                                                 <constraint firstItem="tcC-7Y-7Gp" firstAttribute="top" secondItem="gSq-Kj-hQi" secondAttribute="bottom" constant="8" id="FtA-xf-N6j"/>
                                                 <constraint firstItem="gSq-Kj-hQi" firstAttribute="leading" secondItem="PoI-P3-ams" secondAttribute="trailing" constant="20" id="GvV-Eh-GMC"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="gSq-Kj-hQi" secondAttribute="trailing" constant="8" id="HBW-6W-bUu"/>
@@ -167,7 +175,14 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="tcC-7Y-7Gp" secondAttribute="trailing" constant="8" id="jEp-MZ-2uA"/>
                                                 <constraint firstItem="tcC-7Y-7Gp" firstAttribute="leading" secondItem="PoI-P3-ams" secondAttribute="trailing" constant="20" id="ov9-bo-eid"/>
                                             </constraints>
+                                            <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cohortLabel" destination="iPo-a4-eVC" id="xpL-sh-fVv"/>
+                                            <outlet property="descriptionLabel" destination="tcC-7Y-7Gp" id="30Q-5h-btO"/>
+                                            <outlet property="profilePictureImageView" destination="PoI-P3-ams" id="3eN-Ia-wOI"/>
+                                            <outlet property="userNameLabel" destination="6Zp-wm-46H" id="RCy-O0-nYr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -185,6 +200,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cohort" image="list.bullet.clipboard" catalog="system" selectedImage="list.bullet.clipboard.fill" id="JQU-qJ-W7R"/>
+                    <connections>
+                        <outlet property="userListTableView" destination="Vg6-qA-CAd" id="Wgl-Nd-73o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAa-0g-dZo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -193,7 +211,7 @@
         <!--User Setting-->
         <scene sceneID="4yL-Rj-Fab">
             <objects>
-                <viewController id="QZT-Gk-qMy" sceneMemberID="viewController">
+                <viewController id="QZT-Gk-qMy" customClass="UserSettingsViewController" customModule="FutureBirdGang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1wD-Dd-wNf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -241,12 +259,18 @@
                                 <rect key="frame" x="166" y="620" width="61" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="QZT-Gk-qMy" eventType="touchUpInside" id="YSE-nI-sfR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJv-sG-jkN">
                                 <rect key="frame" x="100" y="714.33333333333337" width="193" height="34.333333333333371"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOutButtonTapped:" destination="QZT-Gk-qMy" eventType="touchUpInside" id="Du7-nB-fRI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wmB-A8-fu8"/>
@@ -273,15 +297,21 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="User Setting" image="person" catalog="system" selectedImage="person.fill" id="Lb4-TS-71n"/>
+                    <connections>
+                        <outlet property="cohortTextField" destination="9xt-PP-zXV" id="TQU-jN-gHU"/>
+                        <outlet property="descriptionTextField" destination="OqK-fL-ZoE" id="cVb-4K-Eo7"/>
+                        <outlet property="profileImageView" destination="dWr-T8-98f" id="AEE-Yo-ab2"/>
+                        <outlet property="userNameTextField" destination="epV-ig-RmF" id="XoL-f1-Aj6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="amp-8T-ZGG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="956" y="37"/>
         </scene>
-        <!--View Controller-->
+        <!--Create User View Controller-->
         <scene sceneID="Ivm-hz-MF9">
             <objects>
-                <viewController id="FVu-U9-Rfq" sceneMemberID="viewController">
+                <viewController id="FVu-U9-Rfq" customClass="CreateUserViewController" customModule="FutureBirdGang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A2I-eZ-dsg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -319,6 +349,9 @@
                                 <rect key="frame" x="20" y="494.66666666666669" width="353" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Create Account"/>
+                                <connections>
+                                    <action selector="createUserButtonTapped:" destination="FVu-U9-Rfq" eventType="touchUpInside" id="nhd-Ee-4pz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5cF-oz-3sQ"/>
@@ -335,6 +368,11 @@
                             <constraint firstItem="0av-zh-E12" firstAttribute="leading" secondItem="5cF-oz-3sQ" secondAttribute="leading" constant="20" id="vUE-dq-fGm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="nIj-7n-H8E" id="zvg-DP-GH8"/>
+                        <outlet property="userEmailTextField" destination="g5j-1Z-gTJ" id="cXf-Ml-VSr"/>
+                        <outlet property="userPasswordTextField" destination="0Hu-uw-xLM" id="hPC-QS-2QI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R43-Nu-jcw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
